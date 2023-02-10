@@ -6,22 +6,27 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "dependencies": {
-    "ui": "workspace:*",
+    "@emotion/cache": "^11.10.5",
+    "@emotion/react": "^11.10.5",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.8",
     "@next/font": "13.1.6",
     "next": "^13.1.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "ui": "workspace:*"
   },
   "devDependencies": {
-    "eslint-config": "workspace:*",
-    "tsconfig": "workspace:*",
     "@types/node": "^17.0.12",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "eslint": "8.33.0",
+    "eslint-config": "workspace:*",
+    "tsconfig": "workspace:*",
     "typescript": "4.9.5"
   }
 }

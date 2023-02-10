@@ -29,6 +29,7 @@ module.exports = {
   },
 
   rules: {
+    'react/jsx-props-no-spreading': 'off',
     'react/react-in-jsx-scope': 'off',
     'import/no-extraneous-dependencies': 'off',
     '@next/next/no-html-link-for-pages': 'off',
