@@ -1,10 +1,5 @@
-import { Button } from "ui";
-
-export default function Docs() {
+export default function Home() {
   return (
-    <div>
-      <h1>Docs</h1>
-      <Button />
-    </div>
+    <h1>Hello World</h1>
   );
 }
