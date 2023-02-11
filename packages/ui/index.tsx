@@ -1,2 +1,1 @@
-import * as React from "react";
-export * as Button from "./Button"
+export * as Header from './docs/Navigation';
