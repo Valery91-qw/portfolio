@@ -1,11 +1,13 @@
+import { ReactNode } from 'react';
+
 interface ISkillComponent {
-  srcToImg: string
   title: string
+  children: ReactNode
 }
-export default function SkillComponent({ srcToImg, title } : ISkillComponent) {
+export default function SkillComponent({ title, children } : ISkillComponent) {
   return (
     <div className="flex items-center bg-zinc-800 p-5 rounded-lg">
-      <img src={srcToImg} alt="alt" width="50px" height="50px" className="mr-10" />
+      {children}
       <div>
         <h3 className="pb-5 text-color-primary">{title}</h3>
         <p className="max-w-sm">

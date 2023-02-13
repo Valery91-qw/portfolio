@@ -9,7 +9,9 @@ export default function Home() {
       <HeroSection>
         <Image src={imagePlaceHolder} alt="alt" width="300" height="300" className="mr-0" />
       </HeroSection>
-      <SkillsSection srcToImg={imagePlaceHolder} />
+      <SkillsSection
+        imgElement={<Image src={imagePlaceHolder} alt="alt" width="50" height="50" className="mr-5" />}
+      />
     </main>
   );
 }
