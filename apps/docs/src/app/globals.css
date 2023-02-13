@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 :root {
-    --text-color: #fafafa;
+    --text-color-primary: #fafafa;
+    --text-color-secondary: #18181b;
     --hover-text-color: #f10000;
 }
 
 .text-hover-animate {
     overflow: hidden;
-    background: linear-gradient(to right, var(--hover-text-color), var(--hover-text-color) 50%, var(--text-color) 50%);
+    background: linear-gradient(to right, var(--hover-text-color), var(--hover-text-color) 50%, var(--text-color-primary) 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
