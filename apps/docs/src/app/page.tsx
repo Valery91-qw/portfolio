@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import HeroSection from 'ui/docs/HeroSection';
+import SkillsSection from 'ui/docs/Skills/SkillsSection';
 
 const imagePlaceHolder = 'https://via.placeholder.com/600.png';
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection>
         <Image src={imagePlaceHolder} alt="alt" width="300" height="300" className="mr-0" />
       </HeroSection>
+      <SkillsSection srcToImg={imagePlaceHolder} />
     </main>
   );
 }

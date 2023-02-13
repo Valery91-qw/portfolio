@@ -1,4 +1,4 @@
-import React, {createElement, ReactHTML} from 'react';
+import React, { createElement, ReactHTML } from 'react';
 
 interface IContainer {
   tag: keyof ReactHTML
@@ -7,10 +7,19 @@ interface IContainer {
   classes?: string
   children: React.ReactNode
 }
-export default function Container({ columns, tag , children, classes }: IContainer) {
-  const colsClass = `columns-${columns}`;
-  // in the React library there is an issue to change this type from 'input' to the 'keyof ReactHTML'
+export default function Container({
+  columns, tag, children, classes,
+}: IContainer) {
+  const colAmount = `columns-${columns}`;
+  /*
+  In the React library there is an issue:
+   to change this type from 'input' to the 'keyof ReactHTML'
+   */
   return createElement(tag as 'input', {
-    className: `container py-10 mx-auto ${colsClass} ${classes}`
+    className: `container py-10 mx-auto px-5 ${colAmount} ${classes}`,
   }, children);
 }
+
+Container.defaultProps = {
+  classes: '',
+};
