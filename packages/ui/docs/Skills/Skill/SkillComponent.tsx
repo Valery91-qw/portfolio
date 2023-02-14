@@ -4,10 +4,11 @@ interface ISkillComponent {
   title: string
   children: ReactNode
 }
+
 export default function SkillComponent({ title, children } : ISkillComponent) {
   return (
     <div className="flex items-center bg-zinc-800 p-5 rounded-lg">
-      {children}
+      { children }
       <div>
         <h3 className="pb-5 text-color-primary">{title}</h3>
         <p className="max-w-sm">

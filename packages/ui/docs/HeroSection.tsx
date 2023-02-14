@@ -8,7 +8,7 @@ interface IHeroSection {
 export default function HeroSection({ children }: IHeroSection) {
   return (
     <div className="bg-zinc-50 h-screen flex items-center">
-      <Container tag="div" columns={2} classes="px-5 flex justify-between">
+      <Container tag="div" classes="px-5 flex justify-between">
         <section className="text-color-secondary mr-10">
           <h2 className="text-4xl mb-10 text-center">HI there</h2>
           <p className="max-w-prose">

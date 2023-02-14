@@ -4,17 +4,14 @@ import {
 
 interface IContainer {
   tag: keyof ReactHTML
-  columns: 1 | 2 | 3 | 4
-
-  classes?: string
   children: ReactNode
+  classes?: string
   style?: CSSProperties
 }
 export default function Container({
-  columns, tag, children, classes, ...rest
+  tag, children, classes, ...rest
 }: IContainer) {
-  const colAmount = `columns-${columns}`;
-  const classNames = `container py-10 mx-auto px-5 ${colAmount} ${classes}`;
+  const classNames = `container py-10 mx-auto px-5 ${classes}`;
   const props = { className: classNames, ...rest };
   /*
   In the React library there is an issue:
