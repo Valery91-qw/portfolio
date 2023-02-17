@@ -1,11 +1,9 @@
-'use client';
-
 import Container from '../common/Container';
 
 const submit = 'https://formsubmit.co/43c6e659a5f668b6526105fa226276b3';
 export default function Form() {
   return (
-    <div className="bg-zinc-900 text-zinc-50">
+    <section className="bg-zinc-900 text-zinc-50">
       <Container tag="form" classes="flex flex-col items-center" method="post" action={submit}>
         <>
           <label htmlFor="first">First name</label>
@@ -16,6 +14,6 @@ export default function Form() {
         </>
         <button type="submit">Submit</button>
       </Container>
-    </div>
+    </section>
   );
 }

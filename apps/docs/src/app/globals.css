@@ -15,7 +15,8 @@
   h3 {
       font-size: x-large;
   }
-  span:has(a) {
+
+  header.bg-zinc-900 span {
       overflow: hidden;
       background: linear-gradient(to right, var(--hover-text-color), var(--hover-text-color) 50%, var(--text-color-primary) 50%);
       background-clip: text;
@@ -28,9 +29,30 @@
       text-transform: uppercase;
       font-weight: 900;
   }
-  span:has(a):hover {
+
+  header.bg-zinc-900 span:hover {
       background-position: 0 100%;
       text-decoration: underline;
       text-decoration-color: var(--hover-text-color);
   }
+
+    header.bg-zinc-50 span {
+        overflow: hidden;
+        background: linear-gradient(to right, var(--hover-text-color), var(--hover-text-color) 50%, var(--text-color-secondary) 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 275ms ease;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
+    header.bg-zinc-50 span:hover {
+        background-position: 0 100%;
+        text-decoration: underline;
+        text-decoration-color: var(--hover-text-color);
+    }
 }
