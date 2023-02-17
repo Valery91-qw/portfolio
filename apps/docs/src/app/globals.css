@@ -8,19 +8,29 @@
     --hover-text-color: #f10000;
 }
 
-.text-hover-animate {
-    overflow: hidden;
-    background: linear-gradient(to right, var(--hover-text-color), var(--hover-text-color) 50%, var(--text-color-primary) 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 100%;
-    background-position: 100%;
-    transition: background-position 275ms ease;
-}
-
-.text-hover-animate:hover {
-    background-position: 0 100%;
-    text-decoration: underline;
-    text-decoration-color: var(--hover-text-color);
+@layer base {
+  h2 {
+      font-size: xxx-large;
+  }
+  h3 {
+      font-size: x-large;
+  }
+  span:has(a) {
+      overflow: hidden;
+      background: linear-gradient(to right, var(--hover-text-color), var(--hover-text-color) 50%, var(--text-color-primary) 50%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 100%;
+      background-position: 100%;
+      transition: background-position 275ms ease;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-weight: 900;
+  }
+  span:has(a):hover {
+      background-position: 0 100%;
+      text-decoration: underline;
+      text-decoration-color: var(--hover-text-color);
+  }
 }

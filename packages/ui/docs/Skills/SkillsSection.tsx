@@ -10,7 +10,7 @@ const skills = ['react', 'redux', 'typescript', 'javaScript'];
 
 export default function SkillsSection({ imgElement }: ISkillsSection) {
   return (
-    <div className="bg-zinc-900 text-zinc-100">
+    <div className="bg-zinc-900 text-zinc-50">
       <Container tag="div" classes="px-5 flex flex-wrap gap-x-10 gap-y-5 justify-center">
         {
             skills.map(
