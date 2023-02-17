@@ -29,10 +29,16 @@ module.exports = {
   },
 
   rules: {
+    'react/require-default-props': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/react-in-jsx-scope': 'off',
     'import/no-extraneous-dependencies': 'off',
     '@next/next/no-html-link-for-pages': 'off',
+    'jsx-a11y/label-has-associated-control': ['error', {
+      'required': {
+        'some': ['nesting', 'id']
+      }
+    }]
   },
 
   ignorePatterns: [

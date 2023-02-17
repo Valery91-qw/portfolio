@@ -11,7 +11,7 @@ export default function Container({
   tag, children, classes = '', ...rest
 }: IContainer) {
   const classNames = `container py-10 mx-auto px-5 ${classes}`;
-  const props = {className: classNames, ...rest };
+  const props = { className: classNames, ...rest };
   /*
   In the React library there is an issue:
    to change this type from 'input' to the 'keyof ReactHTML'

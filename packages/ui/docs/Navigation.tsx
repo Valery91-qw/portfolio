@@ -4,7 +4,6 @@ interface INavigation {
   elements: Array<string>
 }
 
-
 export default function Navigation({ elements } : INavigation) {
   return (
     <header className="sticky top-0 z-30 w-full bg-zinc-900 font-mono">
