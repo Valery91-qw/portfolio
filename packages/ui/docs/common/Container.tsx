@@ -1,20 +1,13 @@
 import {
-  createElement, ReactHTML, ReactNode,
+  ElementType, HTMLAttributes,
 } from 'react';
 
-interface IContainer {
-  tag: keyof ReactHTML
-  children: ReactNode
-  classes?: string
+interface IContainer extends HTMLAttributes<HTMLOrSVGElement> {
+  component: ElementType
 }
-export default function Container({
-  tag, children, classes = '', ...rest
-}: IContainer) {
-  const classNames = `container py-10 mx-auto px-5 ${classes}`;
-  const props = { className: classNames, ...rest };
-  /*
-  In the React library there is an issue:
-   to change this type from 'input' to the 'keyof ReactHTML'
-   */
-  return createElement(tag as 'input', props, children);
+
+export default function Container({ component: Tag, ...rest }: IContainer) {
+  const styles = `container py-10 mx-auto px-5 ${rest.className}`;
+  const props = { className: styles, ...rest };
+  return <Tag {...props} />;
 }

@@ -1,9 +1,9 @@
 'use client';
 
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Container from './common/Container';
 
-interface INavigation {
+interface INavigation extends React.ComponentPropsWithoutRef<'header'> {
   elements: Array<string>
 }
 
@@ -45,7 +45,7 @@ export default function Navigation({ elements } : INavigation) {
 
   return (
     <header className="sticky top-0 z-30 w-full bg-zinc-900 font-mono transition-colors">
-      <Container tag="nav" classes="py-5 flex justify-end gap-x-10">
+      <Container component="nav" className="flex justify-end gap-10 py-5 px-10">
         {elements
           .map((el) => (
             <span key={el}>

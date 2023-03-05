@@ -11,7 +11,7 @@ const skills = ['react', 'redux', 'typescript', 'javaScript'];
 export default function SkillsSection({ imgElement }: ISkillsSection) {
   return (
     <section className="bg-zinc-900 text-zinc-50">
-      <Container tag="div" classes="px-5 flex flex-wrap gap-x-10 gap-y-5 justify-center">
+      <Container component="div" className="flex flex-wrap gap-x-10 gap-y-5 justify-center py-10">
         {
             skills.map(
               (el) => <SkillComponent title={el} key={el}>{imgElement}</SkillComponent>,
